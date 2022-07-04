@@ -17,6 +17,7 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
+import {Link} from "react-router-dom";
 
 
 const Container = styled.div`
@@ -58,6 +59,14 @@ const Divider = styled.div`
     border: 0.5px solid ${({ theme }) => theme.soft};;
 `;
 
+const Title = styled.h2`
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #aaaaaa;
+`;
+
+
 const Login = styled.div`
     display: flex;
     align-items: center;
@@ -83,10 +92,13 @@ const Menu = ({darkMode, setDarkMode}) => {
     return (
         <Container>
             <Wrapper>
+                <Link to="/" style={{textDecoration:"none", color:"inherit"}}>
                 <Logo>
+
                     <Img src={LogoYt} />
                     RaoulTube
                 </Logo>
+                </Link>
                 <Item>
                     <HomeIcon />
                     Home
@@ -111,9 +123,10 @@ const Menu = ({darkMode, setDarkMode}) => {
                 <Login>Sign in to like, comment and subscribe.</Login>
                 <Button>
                     <AccountCircleOutlinedIcon />
-                    SIGN IN{" "}
+                    SIGN IN
                 </Button>
                 <Divider />
+                <Title>BEST OF RAOULTUBE</Title>
                 <Item>
                     <LibraryMusicOutlinedIcon />
                     Music
