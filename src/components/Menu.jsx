@@ -18,11 +18,12 @@ import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
 
+
 const Container = styled.div`
     flex: 1;
-    background-color: #202020;
+    background-color: ${({ theme }) => theme.bgLighter};
     height: 100vh;
-    color: #fff;
+    color: ${({ theme }) => theme.text};
     font-size: 14px;
     position: sticky;
     top: 0;
@@ -54,7 +55,7 @@ const Item = styled.div`
 
 const Divider = styled.div`
     margin: 15px 0px;
-    border: 0.5px solid #373737;
+    border: 0.5px solid ${({ theme }) => theme.soft};;
 `;
 
 const Login = styled.div`
@@ -78,7 +79,7 @@ const Button = styled.button`
     gap: 5px;
 `;
 
-const Menu = () => {
+const Menu = ({darkMode, setDarkMode}) => {
     return (
         <Container>
             <Wrapper>
@@ -151,9 +152,9 @@ const Menu = () => {
                     Help
                 </Item>
                 <Divider />
-                <Item>
+                <Item onClick={()=> setDarkMode(!darkMode)  }>
                     <SettingsBrightnessOutlinedIcon />
-                    Light Mode
+                    {darkMode ? "Light" : "Dark"} Mode
                 </Item>
             </Wrapper>
         </Container>
