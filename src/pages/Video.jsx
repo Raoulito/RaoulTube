@@ -5,6 +5,7 @@ import ThumbDownOutlinedIcon from "@mui/icons-material/ThumbDownOutlined";
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import SaveOutlinedIcon from "@mui/icons-material/SaveOutlined";
 import Comments from "../components/Comments";
+import Card from "../components/Card";
 
 const Container = styled.div`
     display: flex;
@@ -56,6 +57,7 @@ const Divider = styled.div`
 
 const Recommandation = styled.div`
     flex: 2;
+    margin-top : 20px;
 `;
 
 const Channel = styled.div`
@@ -155,7 +157,18 @@ const Video = () => {
 
             </Content>
 
-            <Recommandation>Recommandation</Recommandation>
+            <Recommandation>
+              <Card type="sm"/>
+              <Card type="sm"/>
+              <Card type="sm"/>
+              <Card type="sm"/>
+              <Card type="sm"/>
+              <Card type="sm"/>
+              <Card type="sm"/>
+              <Card type="sm"/>
+              <Card type="sm"/>
+              <Card type="sm"/>
+            </Recommandation>
         </Container>
     );
 };

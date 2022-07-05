@@ -3,22 +3,27 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 const Container = styled.div`
-width : 300px;
-margin: 20px 20px 50px;
+width :  ${(props)=>props.type !== "sm" && "300px"};
+margin-bottom:${(props)=>props.type === "sm" ? "10px" :"45px"};
+margin-right:10px;
+margin-left:10px;
 cursor : pointer;
-padding-bottom: 10px;
+display: ${(props)=>props.type === "sm" && "flex"};
+gap  : ${(props)=>props.type === "sm" && "10px"};
 `;
 
 const Image = styled.img`
 width : 100%;
-height : 180px;
+height : ${(props)=>props.type === "sm" ? "100px" :"200px"};
 background-color : #999;
+flex: 1;
 `;
 
 const Details = styled.div`
 display : flex;
-margin-top : 10px;
+margin-top :  ${(props)=>props.type === "sm" ? "none" : "20px"};
 gap : 12px;
+flex:1;
 `;
 
 const Texts = styled.div`
@@ -41,7 +46,7 @@ color : ${({ theme }) => theme.text};
 
 
 const Info = styled.div`
-font-size : 14px;
+font-size : ${(props)=>props.type === "sm" ? "12px" : "14px"};
 color : ${({ theme }) => theme.textSoft};
 `;
 
@@ -51,19 +56,20 @@ height : 36px;
 object-fit : cover;
 border-radius : 50%;
 background-color : #999;
+display : ${(props)=>props.type === "sm" && "none"};
 `;
 
-const Card = () => {
+const Card = ({type}) => {
   return (
     <Link to="/video/123" style={{textDecoration:"none"}}>
-    <Container>
-      <Image src="https://i.ibb.co/J72F87k/Capture-d-cran-de-2022-07-05-11-54-19.png"/>
-      <Details>
-        <ChannelImage src="https://avatars.githubusercontent.com/u/69431755?v=4"/>
+    <Container type={type}>
+      <Image type={type} src="https://i.ibb.co/J72F87k/Capture-d-cran-de-2022-07-05-11-54-19.png"/>
+      <Details type={type}>
+        <ChannelImage type={type} src="https://avatars.githubusercontent.com/u/69431755?v=4"/>
         <Texts>
             <Title>Test title </Title>
             <ChannelName>Test channel name</ChannelName>
-            <Info>557,837 views - 12 hours ago</Info>
+            <Info type={type}>557,837 views - 12 hours ago</Info>
         </Texts>
         
         </Details>

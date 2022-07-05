@@ -52,6 +52,10 @@ const Item = styled.div`
     gap: 15px;
     cursor: pointer;
     margin-bottom: 5px;
+
+    &:hover{
+        background-color: ${({ theme }) => theme.soft};
+    }
 `;
 
 const Divider = styled.div`
