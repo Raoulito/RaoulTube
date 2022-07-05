@@ -4,8 +4,9 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 width : 300px;
-margin: 20px 20px 60px;
+margin: 20px 20px 50px;
 cursor : pointer;
+padding-bottom: 10px;
 `;
 
 const Image = styled.img`
@@ -56,12 +57,12 @@ const Card = () => {
   return (
     <Link to="/video/123" style={{textDecoration:"none"}}>
     <Container>
-      <Image src="https://i.ibb.co/pxJSS5C/Capture-d-cran-de-2022-07-04-17-06-21.png0"/>
+      <Image src="https://i.ibb.co/J72F87k/Capture-d-cran-de-2022-07-05-11-54-19.png"/>
       <Details>
         <ChannelImage src="https://avatars.githubusercontent.com/u/69431755?v=4"/>
         <Texts>
-            <Title>Raoul's video title </Title>
-            <ChannelName>Raoul's channel</ChannelName>
+            <Title>Test title </Title>
+            <ChannelName>Test channel name</ChannelName>
             <Info>557,837 views - 12 hours ago</Info>
         </Texts>
         
