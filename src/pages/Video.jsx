@@ -57,7 +57,7 @@ const Divider = styled.div`
 
 const Recommandation = styled.div`
     flex: 2;
-    margin-top : 20px;
+    margin-top: 20px;
 `;
 
 const Channel = styled.div`
@@ -153,21 +153,20 @@ const Video = () => {
                     <Subscribe>SUBSCRIBE</Subscribe>
                 </Channel>
                 <Divider />
-<Comments />
-
+                <Comments />
             </Content>
 
             <Recommandation>
-              <Card type="sm"/>
-              <Card type="sm"/>
-              <Card type="sm"/>
-              <Card type="sm"/>
-              <Card type="sm"/>
-              <Card type="sm"/>
-              <Card type="sm"/>
-              <Card type="sm"/>
-              <Card type="sm"/>
-              <Card type="sm"/>
+                <Card type="sm" />
+                <Card type="sm" />
+                <Card type="sm" />
+                <Card type="sm" />
+                <Card type="sm" />
+                <Card type="sm" />
+                <Card type="sm" />
+                <Card type="sm" />
+                <Card type="sm" />
+                <Card type="sm" />
             </Recommandation>
         </Container>
     );

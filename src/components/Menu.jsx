@@ -125,10 +125,12 @@ const Menu = ({darkMode, setDarkMode}) => {
                 </Item>
                 <Divider />
                 <Login>Sign in to like, comment and subscribe.</Login>
+                <Link to="signin" style={{textDecoration:"none"}}>
                 <Button>
                     <AccountCircleOutlinedIcon />
                     SIGN IN
                 </Button>
+                </Link>
                 <Divider />
                 <Title>BEST OF RAOULTUBE</Title>
                 <Item>
