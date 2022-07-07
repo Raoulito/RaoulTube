@@ -12,8 +12,8 @@ mongoose
       useUnifiedTopology: true,
     }
   )
-  .then(() => console.log("Connecté à MongoDB..."))
-  .catch(() => console.log("NON connecté à MongoDB..."));
+  .then(() => console.log("Connected to MongoDB..."))
+  .catch(() => console.log("NOT connected to MongoDB..."));
 
 app.use(express.json());
 
@@ -31,11 +31,7 @@ app.use((req, res, next) => {
   next();
 });
 
-//Adding images path
-app.use("/images", express.static(path.join(__dirname, "images")));
-
 //Users routes
 app.use("/api/auth", require("./routes/user"));
-app.use("/api/sauces", require("./routes/sauces"));
 
 module.exports = app;
